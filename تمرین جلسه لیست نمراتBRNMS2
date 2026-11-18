@@ -1,0 +1,22 @@
+برنامه ای بنویسید که یک لیست از نمرات را دریافت کند
+میانگین نمرات رو حساب کند و تعداد افرادی که نمره شان بیشتر از ده شده رو بشماره
+
+void main() {
+  List<double> scores = [15, 18, 9, 12, 8, 20];
+
+  double sum = 0;
+  int count = 0;
+
+  for (int i = 0; i < scores.length; i++) {
+    sum += scores[i];
+
+    if (scores[i] > 10) {
+      count++;
+    }
+  }
+
+  double average = sum / scores.length;
+
+  print('میانگین نمرات: $average');
+  print('تعداد نمرات بالاتر از ۱۰: $count');
+}
