@@ -1,3 +1,27 @@
 برنامه ای بنویسید
 نام یک دانش اموز را ذخیره کندسن ان را ذخیره کن و معدل ان را ذخیره کند و مشخص کند که ان دانش اموز قبول شده یا خیر
 
+
+import 'dart:io';
+
+void main() {
+  print('نام دانش آموز را وارد کنید:');
+  String name = stdin.readLineSync()!;
+
+  print('سن دانش آموز را وارد کنید:');
+  int age = int.parse(stdin.readLineSync()!);
+
+  print('معدل دانش آموز را وارد کنید:');
+  double average = double.parse(stdin.readLineSync()!);
+
+  print('-------------------');
+  print('نام: $name');
+  print('سن: $age');
+  print('معدل: $average');
+
+  if (average >= 10) {
+    print('وضعیت: قبول');
+  } else {
+    print('وضعیت: مردود');
+  }
+}
